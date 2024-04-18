@@ -49,13 +49,10 @@ function ScoreCalculator() {
         <ExamInput key={index} name={exam.name} score={exam.score === null ? '' : exam.score} akts={exam.akts} onScoreChange={(newScore) => handleScoreChange(index, newScore)} />
     ))}
     </div>
-    
       <TotalScore totalScore={calculateTotalScore()} calculateMinFinalExamScore={calculateMinFinalExamScore()}/>
-      
     </div>
     <p className='text-sm font-semibold text-white mt-4 text-center'>Developed by Sarp.</p>
     </div>
-    
   );
 }
 
