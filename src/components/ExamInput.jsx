@@ -13,15 +13,17 @@ function ExamInput({ name, score, akts, onScoreChange }) {
         <input
           type="number"
           className="bg-gray-700 rounded-md py-2 px-3 text-white w-32 mr-2"
-          placeholder="Score"
+          placeholder="Not"
           value={score}
+          min={-50}
+          max={100}
           onChange={handleScoreChange}
         />
         <span className="text-white mr-2">x</span>
         <span className="text-white mr-2">AKTS</span>
         <input
           type="number"
-          className="bg-gray-700 rounded-md py-2 text-white w-10 pl-4 text-center"
+          className="bg-gray-700 rounded-md py-2 text-white w-10 text-center"
           placeholder="AKTS"
           value={akts}
           readOnly
