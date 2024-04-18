@@ -42,7 +42,7 @@ function ScoreCalculator() {
 
   return (
     <div>
-    <h1 className="text-3xl font-bold text-white mb-7 text-center">Score Calculator</h1>
+    <h1 className="text-3xl font-bold text-white mb-7 text-center">Kurul Ortalama Hesaplama</h1>
     <div className="flex bg-gray-800 px-8 pt-8 pb-4 rounded-lg shadow-lg max-w-xl w-full">
     <div>
       {exams.map((exam, index) => (
