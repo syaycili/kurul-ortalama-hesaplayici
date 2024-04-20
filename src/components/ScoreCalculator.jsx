@@ -50,7 +50,7 @@ function ScoreCalculator() {
       </CardHeader>
       <Divider/>
       <CardBody>
-      <div className='grid gap-4'>
+      <div className='flex justify-center grid gap-4'>
       {exams.map((exam, index) => (
         <ExamInput key={index} name={exam.name} score={exam.score === null ? '' : exam.score} akts={exam.akts} onScoreChange={(newScore) => handleScoreChange(index, newScore)} />
     ))}
