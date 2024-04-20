@@ -3,8 +3,8 @@ import ScoreCalculator from './components/ScoreCalculator';
 
 function App() {
   return (
-    <div className="flex justify-center h-screen bg-gray-900 pt-5">
-      <ScoreCalculator />
+    <div className="flex justify-center">
+      <ScoreCalculator/>
     </div>
   );
 }

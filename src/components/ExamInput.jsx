@@ -7,8 +7,8 @@ function ExamInput({ name, score, akts, onScoreChange }) {
   };
 
   return (
-    <div className="mb-4 mx-4">
-      <label className="block text-white mb-2">{name}</label>
+    <div className='p-1'>
+      <label className="text-white">{name}</label>
       <div className="flex items-center">
         <input
           type="number"

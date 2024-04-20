@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
+
 import ExamInput from './ExamInput';
 import TotalScore from './TotalScore';
 
-// Default AKTS values for each exam
 const defaultExams = [
   { name: '1. Kurul', akts: 5, score: null},
   { name: '2. Kurul', akts: 8, score: null},
@@ -42,16 +43,26 @@ function ScoreCalculator() {
 
   return (
     <div>
-    <h1 className="text-3xl font-bold text-white mb-7 text-center">Kurul Ortalama Hesaplama</h1>
-    <div className="flex bg-gray-800 px-8 pt-8 pb-4 rounded-lg shadow-lg max-w-xl w-full">
-    <div>
+    <h1 className="text-xl font-semibold text-white p-4 text-center">Kurul Ortalama Hesaplama</h1>
+    <Card className="p-4 w-full">
+      <CardHeader className="flex items-center gap-3">
+      <h1 className="text-md">Notlarınızı Giriniz:</h1>
+      </CardHeader>
+      <Divider/>
+      <CardBody>
+      <div className='grid gap-4'>
       {exams.map((exam, index) => (
         <ExamInput key={index} name={exam.name} score={exam.score === null ? '' : exam.score} akts={exam.akts} onScoreChange={(newScore) => handleScoreChange(index, newScore)} />
     ))}
     </div>
+      </CardBody>
+      <Divider/>
+      <CardFooter className='flex justify-center'>
       <TotalScore totalScore={calculateTotalScore()} calculateMinFinalExamScore={calculateMinFinalExamScore()}/>
-    </div>
-    <p className='text-sm font-semibold text-white mt-4 text-center'>Developed by Sarp.</p>
+      </CardFooter>
+    </Card>
+    <p className='text-sm font-semibold text-white p-4 text-center'>Developed by Sarp.</p>
+
     </div>
   );
 }
