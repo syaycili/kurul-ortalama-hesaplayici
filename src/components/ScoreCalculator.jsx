@@ -5,12 +5,11 @@ import ExamInput from './ExamInput';
 import TotalScore from './TotalScore';
 
 const defaultExams = [
-  { name: '1. Kurul', akts: 5, score: null},
-  { name: '2. Kurul', akts: 8, score: null},
-  { name: '3. Kurul', akts: 8, score: null},
-  { name: '4. Kurul', akts: 8, score: null},
-  { name: '5. Kurul', akts: 8, score: null},
-  { name: '6. Kurul', akts: 8, score: null},
+  { name: 'Sinir Sistemi', akts: 14, score: null},
+  { name: 'Kalp-Damar Sistemi', akts: 11, score: null},
+  { name: 'Beslenme ve Metabolizma', akts: 7, score: null},
+  { name: 'Endokrin ve Ürogenital', akts: 9, score: null},
+  { name: 'Kliniğe Giriş', akts: 9, score: null},
 ];
 const toFixedWithoutZeros = (num, precision) =>
   `${1 * num.toFixed(precision)}`;
@@ -44,6 +43,8 @@ function ScoreCalculator() {
   return (
     <div>
     <h1 className="text-xl font-semibold text-white p-4 text-center">Kurul Ortalama Hesaplama</h1>
+    <p className='text-xs text-white pb-4'><i>2024-2025 Tıp Fakültesi Dönem 2 için güncellenmiştir. </i></p>
+    
     <Card className="p-4 w-full">
       <CardHeader className="flex items-center gap-3">
       <h1 className="text-md">Notlarınızı Giriniz:</h1>
